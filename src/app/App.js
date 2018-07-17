@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+// import firebase from 'firebase';
+import FbConnection from '../FirbaseRequests/connection';
+FbConnection();
+
 class App extends Component {
   render () {
     return (
