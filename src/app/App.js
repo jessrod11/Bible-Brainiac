@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
+import Login from '../Login/Login';
+import Register from '../Register/Register';
+import Dashboard from '../Dashboard/Dashboard';
+import Home from '../Home/Home';
+import Navbar from '../Navbar/Navbar';
+import Game from '../Game/Game';
+import Scripture from '../VerseSpa/VerseSpa';
+
 import './App.css';
 
 class App extends Component {
   render () {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          <button className="btn btn-info">Hello</button>
-        </p>
+      <div className="App container">
+        <Login />
+        <Register />
+        <Dashboard />
+        <Home />
+        <Navbar />
+        <Game />
+        <Scripture />
       </div>
     );
   }
