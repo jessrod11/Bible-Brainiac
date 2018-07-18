@@ -18,7 +18,7 @@ class Login extends React.Component {
     authRequests
       .loginUser(user)
       .then(() => {
-        this.props.history.push('/dashboard');
+        this.props.history.push('/');
       })
       .catch((err) => {
         console.error('error in loginEvent', err);
