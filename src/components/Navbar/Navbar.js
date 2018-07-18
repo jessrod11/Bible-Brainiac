@@ -1,9 +1,17 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import authRequests from '../../FirebaseRequests/auth';
+
 import './Navbar.css';
 
 class Navbar extends React.Component {
   render () {
+    const { authed, runAway } = this.props;
+    const logoutClickEvent = () => {
+      authRequests.logoutUser();
+      runAway();
+    };
+
     return (
       <div className="Navbar">
         <nav className="navbar navbar-inverse">
@@ -17,10 +25,19 @@ class Navbar extends React.Component {
               </button>
               <Link className="navbar-brand" to="/">Scripture App</Link>
             </div>
-            <ul className="nav navbar-nav navbar-right">
-              <li><Link to="/login">Login</Link></li>
-            </ul>
-
+            {
+              authed ? (
+                <ul className="nav navbar-nav navbar-right">
+                  <li><Link to="/game">Game</Link></li>
+                  <li><Link to="/dashboard">Dashboard</Link></li>
+                  <li className="navbar-form"><button onClick={logoutClickEvent}  className="btn btn-info">Logout</button></li>
+                </ul>
+              ) : (
+                <ul className="nav navbar-nav navbar-right">
+                  <li><Link to="/login">Login</Link></li>
+                </ul>
+              )
+            }
           </div>
         </nav>
       </div >
