@@ -4,7 +4,7 @@ import './Login.css';
 class Login extends React.Component {
   render () {
     return (
-      <div className="Login">
+      <div className="Login container">
         <h1>Login</h1>
       </div>
     );
