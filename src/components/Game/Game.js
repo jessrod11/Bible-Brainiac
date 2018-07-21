@@ -22,7 +22,9 @@ class Game extends React.Component {
   render () {
     const scriptureComponents = this.state.scriptures.map((scripture) => {
       return (
-        <h1>{scripture.verse}</h1>
+        <div className="col-md-4">
+          <h1>{scripture.verse}</h1>
+        </div>
       );
     });
 

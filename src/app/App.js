@@ -83,7 +83,7 @@ class App extends React.Component {
             <div className="container">
               <div className="row">
                 <Switch>
-                  <Route path="/" exact component={Home} />
+                  <Route path="/home" exact component={Home} />
                   <PrivateRoute
                     path="/dashboard"
                     authed={this.state.authed}
