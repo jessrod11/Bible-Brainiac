@@ -1,96 +1,77 @@
 {
   "verse1": {
-    "verseId": "6789",
     "verse": "Be strong and courageous.",
     "verseBook": "Deuteronomy 31:6"
   },
   "verse2": {
-    "verseId": "1234",
     "verse": "Truly, Truly I say to you, whoever believes has eternal life.",
     "verseBook": "John 6:47"
   },
   "verse3": {
-    "verseId": "4567",
     "verse": "Rejoice in the Lord",
     "verseBook": "Phillipians 4:4"
   },
   "verse4": {
-    "verseId": "2436",
     "verse": "Behold, I am making all things new.",
     "verseBook": "Revelation 21:5"
   },
   "verse5": {
-    "verseId": "8765",
     "verse": "If God is for us, who can be against us?",
     "verseBook": "Romans 8:31"
   },
   "verse6": {
-    "verseId": "4567",
     "verse": "I can do all things through Christ who strengthens me.",
     "verseBook": "Phillipians 4:13"
   },
   "verse7": {
-    "verseId": "4567",
     "verse": "Do unto others as you would have them do unto you?",
     "verseBook": "Luke 6:31"
   },
   "verse8": {
-    "verseId": "4567",
     "verse": "As for me and my house, we will serve the Lord.",
     "verseBook": "Joshua 24:15"
   },
   "verse9": {
-    "verseId": "4567",
     "verse": "For God so love the world, that He gave His one and only Son, that whoever believes in Him shall not perish, but have eternal life.",
     "verseBook": "John 3:16"
   },
   "verse10": {
-    "verseId": "4567",
     "verse": "Love the Lord your God with all your heart and all your soul and all your mind.",
     "verseBook": "Matthew 22:37"
   },
   "verse11": {
-    "verseId": "4567",
     "verse": "The Lord is with me. I will not be afraid.",
     "verseBook": "Psalm 118:6"
   },
   "verse12": {
-    "verseId": "4567",
     "verse": "God is love",
     "verseBook": "1 John 4:8"
   },
   "verse13": {
-    "verseId": "4567",
     "verse": "Let the field be joyful and all that is in it.",
     "verseBook": "Psalm 96:12"
   },
   "verse14": {
-    "verseId": "4567",
     "verse": "I have written your name on the palms of my hands",
     "verseBook": "Isaiah 49:16"
   },
   "verse15": {
-    "verseId": "4567",
     "verse": "Before I formed you in the womb I knew you. Before you were born, I set you apart.",
     "verseBook": "Jeremiah 1:5"
   },
   "verse16": {
-    "verseId": "4567",
     "verse": "The Lord bless you and keep you.",
     "verseBook": "Numbers 6:24"
   },
   "verse17": {
-    "verseId": "4567",
     "verse": "Give thanks to the Lord for He is good; His love endures forever.",
     "verseBook": "Psalm 107:1"
   },
   "verse18": {
-    "verseId": "4567",
     "verse": "Follow me and I will make you fishers of men.",
     "verseBook": "Matthew 4:19"
   },
   "verse19": {
-    "verseId": "4567",
     "verse": "We love because He first loved us.",
     "verseBook": "1 John 4:19"
   },
@@ -100,22 +81,18 @@
     "verseBook": "Psalm 139:14"
   },
   "verse21": {
-    "verseId": "4567",
     "verse": "He has made everything beautiful in His time.",
     "verseBook": "Ecclesiastes 3:11"
   },
   "verse22": {
-    "verseId": "4567",
     "verse": "Do not fear or I am with you; do not be afraid for I am your God.",
     "verseBook": "Isaiah 41:10"
   },
   "verse23": {
-    "verseId": "4567",
     "verse": "This is the day that the Lord has made, let us rejoice and be glad in it.",
     "verseBook": "Psalm 118:24"
   },
   "verse24": {
-    "verseId": "4567",
     "verse": "We walk by faith, not by sight.",
     "verseBook": "2 Corinthians 5:7"
   }
