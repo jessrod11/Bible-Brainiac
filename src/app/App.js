@@ -86,7 +86,6 @@ class App extends React.Component {
                   <Route
                     path="/home"
                     render={props => <Home{...props} authed={this.state.authed}/>}
-                    // authed={this.state.authed}
                   />
                   <PrivateRoute
                     path="/dashboard"
