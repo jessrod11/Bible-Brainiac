@@ -1,8 +1,23 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import scriptureRequests from '../../FirebaseRequests/scriptures';
+
 import './Home.css';
 
 class Home extends React.Component {
+  state = {
+    scriptures: [],
+  }
+  componentDidMount () {
+    scriptureRequests
+      .getRequest()
+      .then((scriptures) => {
+        this.setState({ scriptures });
+      })
+      .catch((err) => {
+        console.error('error in scriptureGetRequest', err);
+      });
+  }
    startGameEvent = e => {
      // Math.floor(Math.random()) function
    };

@@ -8,6 +8,10 @@ class Game extends React.Component {
     scriptures: [],
   }
 
+  postVerseEvent = e => {
+
+  };
+
   componentDidMount () {
     scriptureRequests
       .getRequest()
@@ -22,8 +26,9 @@ class Game extends React.Component {
   render () {
     const scriptureComponents = this.state.scriptures.map((scripture) => {
       return (
-        <div className="col-md-4 selected-Card">
+        <div className="col-md-4 selected-Card card-styles">
           <h1>{scripture.verse}</h1>
+          <button className="btn btn-lg btn-info" onClick={this.postVerseEvent}>Verse</button>
         </div>
       );
     });
@@ -31,7 +36,7 @@ class Game extends React.Component {
     return (
       <div className="Game">
         <h1>Game</h1>
-        <button className="btn btn-lg btn-info" onClick={this.correctVerseEvent}>Gen 1:1</button>
+        <button className="btn btn-lg btn-danger" onClick={this.correctVerseEvent}>Gen 1:1</button>
         {scriptureComponents}
       </div>
     );
