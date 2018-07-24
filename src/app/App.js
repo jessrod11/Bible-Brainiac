@@ -41,7 +41,7 @@ const PublicRoute = ({ component: Component, authed, ...rest }) => {
           <Component {...props} />
         ) : (
           <Redirect
-            to={{ pathname: '/dashboard', state: { from: props.location } }}
+            to={{ pathname: '/home', state: { from: props.location } }}
           />
         )
       }
@@ -83,7 +83,10 @@ class App extends React.Component {
             <div className="container">
               <div className="row">
                 <Switch>
-                  <Route path="/" exact component={Home} />
+                  <Route
+                    path="/home"
+                    render={props => <Home{...props} authed={this.state.authed}/>}
+                  />
                   <PrivateRoute
                     path="/dashboard"
                     authed={this.state.authed}
@@ -99,11 +102,13 @@ class App extends React.Component {
                     authed={this.state.authed}
                     component={Login}
                   />
-                  <PrivateRoute path="/game"
+                  <PrivateRoute
+                    path="/game"
                     authed={this.state.authed}
                     component={Game}
                   />
-                  <PrivateRoute path="/scripture"
+                  <PrivateRoute
+                    path="/scripture"
                     authed={this.state.authed}
                     component={Scripture}
                   />

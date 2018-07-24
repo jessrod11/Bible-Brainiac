@@ -3,17 +3,38 @@ import {Link} from 'react-router-dom';
 import './Home.css';
 
 class Home extends React.Component {
-  render () {
-    return (
-      <div className="Home">
-        <div className="jumbotron">
-          <div className="container">
-            <p><Link to="/game" className="btn btn-info btn-lg play-button" href="#" role="button">Let's play!</Link></p>
-          </div>
-        </div>
-      </div>
-    );
-  }
+   startGameEvent = e => {
+     // Math.floor(Math.random()) function
+   };
+
+   render () {
+     const {authed} = this.props;
+     return (
+       <div className="Home">
+         <div className="jumbotron">
+           <div className="container">
+             {
+               authed ? (
+                 <Link
+                   to="/game"
+                   className="btn btn-info btn-lg play-button"
+                   href="#"
+                   role="button"
+                   onClick={this.startGameEvent}
+                 >
+                   Let's play!
+                 </Link>
+               ) : (
+                 <button className="btn btn-info btn-lg play-button">
+                     Welcome!
+                 </button>
+               )
+             }
+           </div>
+         </div>
+       </div>
+     );
+   }
 }
 
 export default Home;
