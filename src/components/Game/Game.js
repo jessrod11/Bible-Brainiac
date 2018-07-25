@@ -9,7 +9,7 @@ class Game extends React.Component {
     scriptures: [],
   }
 
-  componentDidMount() {
+  componentDidMount () {
     scriptureRequests
       .getRequest()
       .then((scriptures) => {

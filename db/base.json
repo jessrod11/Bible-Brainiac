@@ -1,11 +1,11 @@
 {
-  "scripture": {
+  "scriptures": {
     "moo": "cow"
   },
-  "game": {
+  "games": {
     "big": "bear"
   },
-  "fave": {
+  "faves": {
     "big": "bear"
   }
 }
