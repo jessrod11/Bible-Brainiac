@@ -1,7 +1,9 @@
 import React from 'react';
+
 import './VerseSpa.css';
 
 class VerseSpa extends React.Component {
+
   render () {
     return (
       <div className="VerseSpa">

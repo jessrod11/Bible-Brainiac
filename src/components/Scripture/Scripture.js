@@ -3,9 +3,10 @@ import './Scripture.css';
 
 class Scripture extends React.Component {
   render () {
+    const {details} = this.props;
     return (
-      <div className="Scripture">
-        <h1>Scripture</h1>
+      <div className="Scripture col-md-4 selected-Card card-styles" >
+        <h2 className="verse-styles"> {details.verse}</h2>
       </div>
     );
   }
