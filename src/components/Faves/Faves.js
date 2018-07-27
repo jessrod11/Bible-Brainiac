@@ -3,9 +3,11 @@ import './Faves.css';
 
 class Faves extends React.Component {
   render () {
+    const {details} = this.props;
     return (
       <div className="Faves">
-        <h1>My Favorite Scriptures</h1>
+        <h3>{details.verse}</h3><button className="glyphicon glyphicon-trash"></button>
+        <h5>{details.verseBook}</h5>
       </div>
     );
   }

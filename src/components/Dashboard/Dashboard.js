@@ -1,7 +1,7 @@
 import React from 'react';
 import favesRequests from '../../FirebaseRequests/faves';
 // import authRequests from '../../FirebaseRequests/auth';
-// import Faves from '../Faves/Faves';
+import Faves from '../Faves/Faves';
 
 import './Dashboard.css';
 
@@ -22,10 +22,10 @@ class Dashboard extends React.Component {
   render () {
     const favesComponents = this.state.faves.map((fave) => {
       return (
-        <div>
-          <h3>{fave.verse}</h3> <button className="glyphicon glyphicon-heart"></button> <button className="glyphicon glyphicon-trash"></button>
-          <h5>{fave.verseBook}</h5>
-        </div>
+        <Faves
+          key={fave.id}
+          details={fave}
+        />
       );
     });
 
