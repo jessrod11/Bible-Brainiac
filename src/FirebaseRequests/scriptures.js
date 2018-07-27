@@ -4,7 +4,7 @@ import constants from '../constantsII';
 const getRequest = () => {
   return new Promise((resolve, reject) => {
     axios
-      .get(`${constants.firebaseConfig.databaseURL}/scripture.json`)
+      .get(`${constants.firebaseConfig.databaseURL}/scriptures.json`)
       .then(res => {
         const scriptures = [];
         if (res.data !== null) {
@@ -21,17 +21,4 @@ const getRequest = () => {
   });
 };
 
-const postRequest = (newScripture) => {
-  return new Promise((resolve, reject) => {
-    axios
-      .post(`${constants.firebaseConfig.databaseURL}/scripture.json/`, newScripture)
-      .then((res) => {
-        resolve(res);
-      })
-      .catch((err) => {
-        reject(err);
-      });
-  });
-};
-
-export default { getRequest, postRequest };
+export default { getRequest};
