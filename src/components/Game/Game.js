@@ -36,11 +36,15 @@ class Game extends React.Component {
         );
       });
     }
+    let scriptureBook = '';
+    if (this.state.game.scriptures) {
+      scriptureBook = this.state.game.scriptures[this.state.game.correctCard].verseBook;
+    }
 
     return (
       <div className="Game">
         <h1>Game</h1>
-        <button className="btn btn-lg btn-danger">{this.state.game.correctCard}</button>
+        <button className="btn btn-lg btn-danger">{scriptureBook}</button>
         {gameComponents}
       </div>
     );
