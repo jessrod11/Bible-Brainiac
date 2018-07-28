@@ -103,7 +103,7 @@ class App extends React.Component {
                     component={Login}
                   />
                   <PrivateRoute
-                    path="/game"
+                    path="/game/:id"
                     authed={this.state.authed}
                     component={Game}
                   />

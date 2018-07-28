@@ -6,7 +6,7 @@ class Scripture extends React.Component {
     const {details} = this.props;
     return (
       <div className="Scripture col-md-4 selected-Card card-styles" >
-        <h2 className="verse-styles"> {details.verse}</h2>
+        <h2 className="verse-styles">{details}</h2>
       </div>
     );
   }

@@ -39,18 +39,6 @@ class Home extends React.Component {
   }
 
   startGameEvent = e => {
-    this.scriptureRandomizer();
-    gameRequest.postRequest(this.state.newGame)
-      .then((res) => {
-        const gameId = res.data.name;
-        this.props.history.push(`/game/${gameId}`);
-      })
-      .catch((err) => {
-        console.error('error in startGameEvent',err);
-      });
-  };
-
-  scriptureRandomizer = () => {
     const newGame = { ...this.state.newGame };
     const scriptures = [...this.state.scriptures];
     const randomScriptures = helpers.shuffle(scriptures);
@@ -65,7 +53,14 @@ class Home extends React.Component {
     newGame.correctCard = `card${Math.floor(Math.random() * 8) + 1}`;
     newGame.createdAt = new Date();
     newGame.uid = authRequests.getUID();
-    this.setState({newGame});
+    gameRequest.postRequest(newGame)
+      .then((res) => {
+        const gameId = res.data.name;
+        this.props.history.push(`/game/${gameId}`);
+      })
+      .catch((err) => {
+        console.error('error in startGameEvent',err);
+      });
   };
 
   render () {
