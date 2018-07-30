@@ -31,6 +31,19 @@ class Dashboard extends React.Component {
         console.error('error while getting faves', err);
       });
   }
+
+  deleteFaveEvent = () => {
+    const gameId = this.props.match.params.id;
+    favesRequests
+      .deleteRequest(gameId)
+      .then((faves) => {
+        this.props.history.push('/dashboard');
+      })
+      .catch((err) => {
+        console.error('error while deleting', err);
+      });
+  };
+
   render () {
     const gameComponents = this.state.games.map((game) => {
       const singleGameEvent = () => {
@@ -51,6 +64,7 @@ class Dashboard extends React.Component {
         <Faves
           key={fave.id}
           details={fave}
+          button={this.deleteFaveEvent}
         />
       );
     });

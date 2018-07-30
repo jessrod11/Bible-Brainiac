@@ -6,8 +6,10 @@ class Faves extends React.Component {
     const {details} = this.props;
     return (
       <div className="Faves">
-        <h3>{details.verse}</h3><button className="glyphicon glyphicon-trash"></button>
+        <h3>{details.verse}</h3>
         <h5>{details.verseBook}</h5>
+        <button className="glyphicon glyphicon-trash"></button>
+        <div className="divider"></div>
       </div>
     );
   }
