@@ -1,14 +1,13 @@
 import React from 'react';
 import Scripture from '../Scripture/Scripture';
-// import scriptureRequests from '../../FirebaseRequests/scriptures';
 import gameRequests from '../../FirebaseRequests/games';
-// import authRequests from '../../FirebaseRequests/auth';
 
 import './Game.css';
 
 class Game extends React.Component {
   state = {
     game: {},
+    // correctScripture: [],
   }
 
   componentDidMount () {
@@ -22,6 +21,11 @@ class Game extends React.Component {
       });
   }
 
+  correctBookEvent = e => {
+    const currentGame = {...this.state.game};
+    console.error('whats this', currentGame);
+  }
+
   render () {
     let gameComponents = null;
     if (this.state.game.scriptures) {
@@ -32,6 +36,7 @@ class Game extends React.Component {
           <Scripture
             key={verseId}
             details={details}
+            scriptures={this.state.game}
           />
         );
       });
@@ -44,7 +49,12 @@ class Game extends React.Component {
     return (
       <div className="Game">
         <h1>Game</h1>
-        <button className="btn btn-lg btn-danger">{scriptureBook}</button>
+        <button
+          className="btn btn-lg btn-danger"
+          onClick={this.correctBookEvent}
+        >
+          {scriptureBook}
+        </button>
         {gameComponents}
       </div>
     );
