@@ -24,7 +24,7 @@ const getRequest = () => {
 const deleteRequest = (gameId) => {
   return new Promise((resolve, reject) => {
     axios
-      .delete(`${constants.firebaseConfig.databaseURL}/games/${gameId}.json`)
+      .delete(`${constants.firebaseConfig.databaseURL}/faves/${gameId}.json`)
       .then((res) => {
         resolve(res);
       })

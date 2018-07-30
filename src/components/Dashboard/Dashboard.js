@@ -22,7 +22,7 @@ class Dashboard extends React.Component {
       });
   }
 
-  componentWillMount () {
+  updateFaveComponent = () => {
     favesRequests.getRequest()
       .then((faves) => {
         this.setState({ faves });
@@ -30,14 +30,18 @@ class Dashboard extends React.Component {
       .catch((err) => {
         console.error('error while getting faves', err);
       });
+  };
+
+  componentWillMount () {
+    this.updateFaveComponent();
   }
 
-  deleteFaveEvent = () => {
-    const gameId = this.props.match.params.id;
+  deleteFaveEvent = (gameId) => {
+    console.error('hi');
     favesRequests
       .deleteRequest(gameId)
-      .then((faves) => {
-        this.props.history.push('/dashboard');
+      .then(() => {
+        this.updateFaveComponent();
       })
       .catch((err) => {
         console.error('error while deleting', err);
@@ -64,7 +68,7 @@ class Dashboard extends React.Component {
         <Faves
           key={fave.id}
           details={fave}
-          button={this.deleteFaveEvent}
+          onClick={this.deleteFaveEvent}
         />
       );
     });
