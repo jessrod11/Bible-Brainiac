@@ -39,10 +39,10 @@ class Dashboard extends React.Component {
       return (
         <button
           key={game.id}
-          className="col-xs-12 btn btn-default"
+          className="col-xs-12 btn btn-default text-center game-button"
           onClick={singleGameEvent}
         >
-          <span className="col-xs-6 text-center"> Game Number: {game.id}</span>
+          <span className="col-xs-6"> Game Number: {game.id}</span>
         </button>
       );
     });

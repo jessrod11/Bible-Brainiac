@@ -21,9 +21,8 @@ class Game extends React.Component {
       });
   }
 
-  correctBookEvent = e => {
-    const currentGame = {...this.state.game};
-    console.error('whats this', currentGame);
+  correctBookEvent = (e) => {
+    console.error('whats this');
   }
 
   render () {
