@@ -108,7 +108,7 @@ class App extends React.Component {
                     component={Game}
                   />
                   <PrivateRoute
-                    path="/scripture"
+                    path="/scripture/:id"
                     authed={this.state.authed}
                     component={Scripture}
                   />

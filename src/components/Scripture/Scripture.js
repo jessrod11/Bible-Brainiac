@@ -7,16 +7,20 @@ class Scripture extends React.Component {
   }
 
   selectedCardEvent = e => {
-    const currentGame = {...this.state.game};
-    console.error('what is this?', currentGame);
+    const card = {
+      verse: this.props.details,
+      verseId: this.props.cardId,
+    };
+    this.props.selectedCardEvent(card);
   };
 
   render () {
-    const {details} = this.props;
+    const {details, cardId} = this.props;
     return (
       <ul className="Scripture col-md-4 selected-Card card-styles" >
         <li>
           <button
+            id={cardId}
             className="verse-styles"
             onClick={this.selectedCardEvent}
           >

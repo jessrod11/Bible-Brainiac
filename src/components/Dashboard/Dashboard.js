@@ -37,7 +37,6 @@ class Dashboard extends React.Component {
   }
 
   deleteFaveEvent = (gameId) => {
-    console.error('hi');
     favesRequests
       .deleteRequest(gameId)
       .then(() => {

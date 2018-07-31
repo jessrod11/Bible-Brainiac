@@ -3,6 +3,9 @@ import React from 'react';
 import './VerseSpa.css';
 
 class VerseSpa extends React.Component {
+  state = {
+    game: {},
+  }
 
   render () {
     // const {details} = this.props;
@@ -17,7 +20,11 @@ class VerseSpa extends React.Component {
           className=" btn btn-lg glyphicon glyphicon-heart"
         >
         </button>
-        <button className="btn btn-lg btn-info">Complete</button>
+        <button
+          className="btn btn-lg btn-info"
+          onClick={this.completedEvent}
+        >
+        Complete</button>
       </div>
     );
   }
