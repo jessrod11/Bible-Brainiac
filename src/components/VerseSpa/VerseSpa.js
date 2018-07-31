@@ -1,21 +1,39 @@
 import React from 'react';
+import featureRequests from '../../FirebaseRequests/featureVerse';
+import authRequests from '../../FirebaseRequests/auth';
+import YouWon from '../YouWon/YouWon';
 
 import './VerseSpa.css';
 
 class VerseSpa extends React.Component {
   state = {
-    game: {},
+    correctVerse: [],
   }
 
+  componentDidMount () {
+    featureRequests.getVerseRequest(authRequests.getUID())
+      .then((correctVerse) => {
+        this.setState({correctVerse});
+      })
+      .catch((err) => {
+        console.error('error while getting featuredVerse', err);
+      });
+  };
+
   render () {
-    // const {details} = this.props;
+    const featureVerseComponent = this.state.correctVerse.map((feature) => {
+      return (
+        <YouWon
+          key={feature.id}
+          details={feature}
+        />
+      );
+    });
+
     return (
       <div className="VerseSpa">
         <h1>Scripture for the week</h1>
-        <div>
-          <h1>"For I know the plans I have for you, declares the Lord, plans to prosper you and not harm you, plans to give you hope and a future."</h1>
-          <h3> Jeremiah 29:11</h3>
-        </div>
+        {featureVerseComponent}
         <button
           className=" btn btn-lg glyphicon glyphicon-heart"
         >
@@ -24,7 +42,7 @@ class VerseSpa extends React.Component {
           className="btn btn-lg btn-info"
           onClick={this.completedEvent}
         >
-        Complete</button>
+          Complete</button>
       </div>
     );
   }

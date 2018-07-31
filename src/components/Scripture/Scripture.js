@@ -10,12 +10,13 @@ class Scripture extends React.Component {
     const card = {
       verse: this.props.details,
       verseId: this.props.cardId,
+      verseBook: this.props.book,
     };
     this.props.selectedCardEvent(card);
   };
 
   render () {
-    const {details, cardId} = this.props;
+    const {details, cardId, book} = this.props;
     return (
       <ul className="Scripture col-md-4 selected-Card card-styles" >
         <li>
@@ -23,6 +24,7 @@ class Scripture extends React.Component {
             id={cardId}
             className="verse-styles"
             onClick={this.selectedCardEvent}
+            book={book}
           >
             {details}</button></li>
       </ul>

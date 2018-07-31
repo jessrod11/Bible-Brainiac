@@ -8,7 +8,6 @@ import './Game.css';
 class Game extends React.Component {
   state = {
     game: {},
-    // correctScripture: [],
   }
 
   componentDidMount () {
@@ -28,7 +27,7 @@ class Game extends React.Component {
 
   correctCardCheck = (card) => {
     if (card.verseId === this.state.game.correctCard) {
-      featureRequests.postRequest({id: card.verseId})
+      featureRequests.postRequest(card)
         .then(() => {
           this.props.history.push(`/scripture/${card.verseId}`);
         })
@@ -44,11 +43,13 @@ class Game extends React.Component {
       gameComponents = Object.keys(this.state.game.scriptures).map((cardId) => {
         const details = this.state.game.scriptures[cardId].verse;
         const verseId = this.state.game.scriptures[cardId].id;
+        const verseBook = this.state.game.scriptures[cardId].verseBook;
         return (
           <Scripture
             key={verseId}
             cardId={cardId}
             details={details}
+            book={verseBook}
             scriptures={this.state.game}
             selectedCardEvent={this.selectedCardEvent}
           />
