@@ -24,7 +24,7 @@ class Dashboard extends React.Component {
   }
 
   updateFaveComponent = () => {
-    favesRequests.getRequest()
+    favesRequests.getRequest(authRequests.getUID())
       .then((faves) => {
         this.setState({ faves });
       })

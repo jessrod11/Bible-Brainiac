@@ -1,6 +1,6 @@
 import React from 'react';
 import featureRequests from '../../FirebaseRequests/featureVerse';
-import faveRequestes from '../../FirebaseRequests/faves';
+import faveRequests from '../../FirebaseRequests/faves';
 import authRequests from '../../FirebaseRequests/auth';
 import YouWon from '../YouWon/YouWon';
 
@@ -21,9 +21,9 @@ class VerseSpa extends React.Component {
       });
   };
 
-  addFaveEvent = () => {
+  postFavorite = () => {
     const correctVerse = {...this.state.correctVerse};
-    faveRequestes.postRequest(correctVerse)
+    faveRequests.postRequest(correctVerse)
       .then(() => {
         this.props.history.push('/dashboard');
       })
@@ -38,6 +38,7 @@ class VerseSpa extends React.Component {
         <YouWon
           key={feature.id}
           details={feature}
+          postFavorite={this.postFavorite}
         />
       );
     });
@@ -46,16 +47,6 @@ class VerseSpa extends React.Component {
       <div className="VerseSpa">
         <h1>Scripture for the week</h1>
         {featureVerseComponent}
-        <button
-          className=" btn btn-lg glyphicon glyphicon-heart"
-          onClick={this.addFaveEvent}
-        >
-        </button>
-        <button
-          className="btn btn-lg btn-info"
-          onClick={this.completedEvent}
-        >
-          Complete</button>
       </div>
     );
   }
