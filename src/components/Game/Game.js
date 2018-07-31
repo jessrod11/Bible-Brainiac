@@ -25,6 +25,14 @@ class Game extends React.Component {
     this.correctCardCheck(card);
   };
 
+  ohNo = () => {
+    return (
+      <div className="alert alert-danger">
+        <p>Uh-oh! Try Again!</p>
+      </div>
+    );
+  }
+
   correctCardCheck = (card) => {
     if (card.verseId === this.state.game.correctCard) {
       featureRequests.postRequest(card)
@@ -34,6 +42,8 @@ class Game extends React.Component {
         .catch((error) => {
           console.error('error in featuredVerse post', error);
         });
+    } else {
+      this.ohNo();
     }
   };
 

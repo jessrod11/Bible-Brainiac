@@ -10,6 +10,7 @@ class Dashboard extends React.Component {
   state = {
     games: [],
     faves: [],
+    // correctVerse: [],
   }
 
   componentDidMount () {
@@ -23,7 +24,7 @@ class Dashboard extends React.Component {
   }
 
   updateFaveComponent = () => {
-    favesRequests.getRequest()
+    favesRequests.getRequest(authRequests.getUID())
       .then((faves) => {
         this.setState({ faves });
       })

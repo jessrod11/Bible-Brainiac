@@ -9,8 +9,8 @@ class Faves extends React.Component {
     };
     return (
       <div className="Faves">
-        <h3>{details.verse}</h3>
-        <h5>{details.verseBook}</h5>
+        <h3>{details[0].verse}</h3>
+        <h5>{details[0].verseBook}</h5>
         <button
           className="glyphicon glyphicon-trash"
           onClick={deleteIt}

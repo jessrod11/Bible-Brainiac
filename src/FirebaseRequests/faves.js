@@ -1,6 +1,19 @@
 import axios from 'axios';
 import constants from '../constantsII';
 
+const postRequest = (newFave) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .post(`${constants.firebaseConfig.databaseURL}/faves.json`, newFave)
+      .then((res) => {
+        resolve(res);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
+};
+
 const getRequest = () => {
   return new Promise((resolve, reject) => {
     axios
@@ -34,4 +47,4 @@ const deleteRequest = (gameId) => {
   });
 };
 
-export default { getRequest, deleteRequest };
+export default { postRequest, getRequest, deleteRequest };
