@@ -14,17 +14,24 @@ const postRequest = (newVerse) => {
   });
 };
 
-const getRequest = (id) => {
+const getVerseRequest = () => {
   return new Promise((resolve, reject) => {
     axios
-      .get(`${constants.firebaseConfig.databaseURL}/featuredVerse/${id}.json`)
+      .get(`${constants.firebaseConfig.databaseURL}/featuredVerse.json`)
       .then(res => {
-        resolve(res.data);
+        const featuredVerse = [];
+        if (res.data !== null) {
+          Object.keys(res.data).forEach(fbKey => {
+            res.data[fbKey].id = fbKey;
+            featuredVerse.push(res.data[fbKey]);
+          });
+        }
+        resolve(featuredVerse);
       })
-      .catch(err => {
+      .catch((err) => {
         reject(err);
       });
   });
 };
 
-export default {postRequest, getRequest};
+export default {postRequest, getVerseRequest};
