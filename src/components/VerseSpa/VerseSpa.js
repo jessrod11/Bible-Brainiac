@@ -1,5 +1,6 @@
 import React from 'react';
 import featureRequests from '../../FirebaseRequests/featureVerse';
+import faveRequestes from '../../FirebaseRequests/faves';
 import authRequests from '../../FirebaseRequests/auth';
 import YouWon from '../YouWon/YouWon';
 
@@ -20,6 +21,17 @@ class VerseSpa extends React.Component {
       });
   };
 
+  addFaveEvent = () => {
+    const correctVerse = {...this.state.correctVerse};
+    faveRequestes.postRequest(correctVerse)
+      .then(() => {
+        this.props.history.push('/dashboard');
+      })
+      .catch((err) => {
+        console.error('error while posting new fave', err);
+      });
+  };
+
   render () {
     const featureVerseComponent = this.state.correctVerse.map((feature) => {
       return (
@@ -36,6 +48,7 @@ class VerseSpa extends React.Component {
         {featureVerseComponent}
         <button
           className=" btn btn-lg glyphicon glyphicon-heart"
+          onClick={this.addFaveEvent}
         >
         </button>
         <button

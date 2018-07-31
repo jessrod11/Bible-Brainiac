@@ -10,6 +10,7 @@ class Dashboard extends React.Component {
   state = {
     games: [],
     faves: [],
+    // correctVerse: [],
   }
 
   componentDidMount () {
