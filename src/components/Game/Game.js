@@ -1,6 +1,7 @@
 import React from 'react';
 import Scripture from '../Scripture/Scripture';
 import gameRequests from '../../FirebaseRequests/games';
+import featureRequests from '../../FirebaseRequests/featureVerse';
 
 import './Game.css';
 
@@ -21,9 +22,21 @@ class Game extends React.Component {
       });
   }
 
-  correctBookEvent = (e) => {
-    console.error('whats this');
-  }
+  selectedCardEvent = (card) => {
+    this.correctCardCheck(card);
+  };
+
+  correctCardCheck = (card) => {
+    if (card.verseId === this.state.game.correctCard) {
+      featureRequests.postRequest({id: card.verseId})
+        .then(() => {
+          this.props.history.push(`/scripture/${card.verseId}`);
+        })
+        .catch((error) => {
+          console.error('error in featuredVerse post', error);
+        });
+    }
+  };
 
   render () {
     let gameComponents = null;
@@ -34,8 +47,10 @@ class Game extends React.Component {
         return (
           <Scripture
             key={verseId}
+            cardId={cardId}
             details={details}
             scriptures={this.state.game}
+            selectedCardEvent={this.selectedCardEvent}
           />
         );
       });

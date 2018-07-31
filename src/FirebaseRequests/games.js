@@ -47,4 +47,17 @@ const getSingleGameRequest = (id) => {
   });
 };
 
-export default { getRequest, postRequest, getSingleGameRequest};
+const putRequest = (gameId, updatedGame) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .put(`${constants.firebaseConfig.databaseURL}/games/${gameId}.json`, updatedGame)
+      .then((res) => {
+        resolve(res);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
+};
+
+export default { getRequest, postRequest, getSingleGameRequest, putRequest};

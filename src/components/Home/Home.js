@@ -21,6 +21,7 @@ class Home extends React.Component {
         card8: '',
       },
       correctCard: '',
+      selectedCard: '',
       inProgress: true,
       createdAt: '',
       completedAt: '',
