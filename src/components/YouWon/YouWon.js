@@ -3,7 +3,7 @@ import './YouWon.css';
 
 class  YouWon extends  React.Component {
   render () {
-    const { details, postFavorite } = this.props;
+    const { details, postFavorite, completeGame } = this.props;
     return (
       <div className="YouWon">
         <h1>{details.verse}</h1>
@@ -15,7 +15,7 @@ class  YouWon extends  React.Component {
         </button>
         <button
           className="btn btn-lg btn-info"
-          onClick={this.completedEvent}
+          onClick={completeGame}
         >
           Complete</button>
       </div>
