@@ -34,10 +34,11 @@ class Game extends React.Component {
   }
 
   correctCardCheck = (card) => {
+    const gameId = this.props.match.params.id;
     if (card.verseId === this.state.game.correctCard) {
-      featureRequests.postRequest(card)
+      featureRequests.postRequest(card, gameId)
         .then(() => {
-          this.props.history.push(`/scripture/${card.verseId}`);
+          this.props.history.push(`/scripture/${gameId}`);
         })
         .catch((error) => {
           console.error('error in featuredVerse post', error);

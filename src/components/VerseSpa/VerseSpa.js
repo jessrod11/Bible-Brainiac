@@ -1,7 +1,6 @@
 import React from 'react';
 import featureRequests from '../../FirebaseRequests/featureVerse';
 import faveRequests from '../../FirebaseRequests/faves';
-import authRequests from '../../FirebaseRequests/auth';
 import YouWon from '../YouWon/YouWon';
 
 import './VerseSpa.css';
@@ -12,9 +11,23 @@ class VerseSpa extends React.Component {
   }
 
   componentDidMount () {
-    featureRequests.getVerseRequest(authRequests.getUID())
+    const tempVerseArray = [];
+    featureRequests.getVerseRequest()
       .then((correctVerse) => {
-        this.setState({correctVerse});
+        const numberOfVerse = correctVerse.length;
+        let counter = 0;
+        correctVerse.forEach((verse) => {
+          featureRequests.getSingleGame(verse.gameId)
+            .then((game) => {
+              if (game.completedAt === '') {
+                tempVerseArray.push(verse);
+              }
+              counter++;
+              if (counter === numberOfVerse) {
+                this.setState({correctVerse: tempVerseArray});
+              }
+            });
+        });
       })
       .catch((err) => {
         console.error('error while getting featuredVerse', err);
@@ -32,6 +45,21 @@ class VerseSpa extends React.Component {
       });
   };
 
+  completeGame = e => {
+    const gameId = this.props.match.params.gameId;
+    featureRequests.getSingleGame(gameId)
+      .then((game) => {
+        game.completedAt = new Date();
+        featureRequests.putRequest(gameId, game)
+          .then(() => {
+            this.props.history.push('/home');
+          });
+      })
+      .catch((err) => {
+        console.error('error while updating scritpure', err);
+      });
+  }
+
   render () {
     const featureVerseComponent = this.state.correctVerse.map((feature) => {
       return (
@@ -39,6 +67,7 @@ class VerseSpa extends React.Component {
           key={feature.id}
           details={feature}
           postFavorite={this.postFavorite}
+          completeGame={this.completeGame}
         />
       );
     });

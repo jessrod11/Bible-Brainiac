@@ -1,7 +1,8 @@
 import axios from 'axios';
 import constants from '../constantsII';
 
-const postRequest = (newVerse) => {
+const postRequest = (newVerse, gameId) => {
+  newVerse.gameId = gameId;
   return new Promise((resolve, reject) => {
     axios
       .post(`${constants.firebaseConfig.databaseURL}/featuredVerse.json`, newVerse)
@@ -34,4 +35,30 @@ const getVerseRequest = () => {
   });
 };
 
-export default {postRequest, getVerseRequest};
+const putRequest = (gameId, updatedGame) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .put(`${constants.firebaseConfig.databaseURL}/games/${gameId}.json`, updatedGame)
+      .then((res) => {
+        resolve(res);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
+};
+
+const getSingleGame = (id) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(`${constants.firebaseConfig.databaseURL}/games/${id}.json`)
+      .then((res) => {
+        resolve(res.data);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
+};
+
+export default {postRequest, getVerseRequest, putRequest, getSingleGame};
