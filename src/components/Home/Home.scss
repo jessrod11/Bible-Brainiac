@@ -1,23 +1,20 @@
 @import'./styles/colors';
 
-.jumbotron {
-  // background: $green;
-      /* The image used */
+body, html {
+    height: 100vh;
+    margin: 0;
+}
+
+.bg {
     background-image: url("https://cec-denver.com/wp-content/uploads/2018/04/Bible.png");
-    background-color: transparent;
-    border-radius: 50px;
-
-    /* Full height */
-    height: 475px;
-
-    /* Center and scale the image nicely */
+    height: 50%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .play-button {
-    margin-top: 350px;
+    margin-top: 600px;
     margin-right: 35px;
 }
 

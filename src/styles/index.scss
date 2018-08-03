@@ -1,3 +1,12 @@
-body {
-  background-color: cadetblue;
+body, html {
+    /* The image used */
+    background-image: url("https://ae01.alicdn.com/kf/HTB1rUW8cRfM8KJjSZFOq6xr5XXaz/7x5FT-Cartoon-Clouds-Rainbow-Sky-Pine-Trees-Green-Garden-Rail-Track-Custom-Photo-Studio-Background-Backdrop.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
