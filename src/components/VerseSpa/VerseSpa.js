@@ -56,7 +56,7 @@ class VerseSpa extends React.Component {
           });
       })
       .catch((err) => {
-        console.error('error while updating scritpure', err);
+        console.error('error while updating scripture', err);
       });
   }
 
