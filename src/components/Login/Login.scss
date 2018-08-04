@@ -1,5 +1,29 @@
 @import './styles/colors';
 
-// .Login {
-//   background: $yellow;
-// };
+* {
+  box-sizing: initial;
+}
+.Login {
+  flex: 1 4 auto;
+  padding-right: 15px;
+  border: 1rem double $green;
+  position: relative;
+  background: $gray;
+  transition: all 0.3s;
+  box-shadow: 0 5px 5px $black;
+  overflow: scroll;
+  margin-top: 35px;
+
+  input {
+    padding: 10px;
+    line-height: 1;
+    font-size: 1.2rem;
+    border: 1px solid $black;
+    border-radius: 0;
+    background: $white;
+  }
+  input:focus{
+    outline: 0;
+    background: $blue;
+  }
+}
