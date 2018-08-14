@@ -39,60 +39,43 @@ class Register extends React.Component {
   };
 
   render () {
+    const userImage = require('./Image/user.png');
     const { user } = this.state;
     return (
       <div className="Register">
-        <div id="login-form">
-          <h1 className="text-center">Register</h1>
-          <form className="form-horizontal col-sm-6 col-sm-offset-3">
-            <div className="form-group">
-              <label htmlFor="inputEmail3" className="col-sm-4 control-label">
-                Email:
-              </label>
-              <div className="col-sm-8">
-                <input
-                  type="email"
-                  className="form-control"
-                  id="inputEmail3"
-                  placeholder="Email"
-                  value={user.email}
-                  onChange={this.emailChange}
-                />
-              </div>
-            </div>
-            <div className="form-group">
-              <label htmlFor="inputPassword3" className="col-sm-4 control-label">
-                Password:
-              </label>
-              <div className="col-sm-8">
-                <input
-                  type="password"
-                  className="form-control"
-                  id="inputPassword3"
-                  placeholder="Password"
-                  value={user.password}
-                  onChange={this.passwordChange}
-                />
-              </div>
-            </div>
-            <div className="form-group">
-              <div className="col-sm-12 text-center">
-                <Link to="/login">Need to Login?</Link>
-              </div>
-            </div>
-            <div className="form-group">
-              <div className="col-sm-12">
-                <button
-                  type="submit"
-                  className="btn btn-default col-xs-12"
-                  onClick={this.registerClickEvent}
-                >
-                  Register
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
+        <img src={userImage} className="user" alt="register avatar" />
+        <h2 className="text-center">Register</h2>
+        <form>
+          <label htmlFor="inputEmail3">
+              Email
+          </label>
+          <input
+            type="email"
+            id="inputEmail3"
+            placeholder="Email"
+            value={user.email}
+            onChange={this.emailChange}
+          />
+          <label htmlFor="inputPassword3">
+            Password
+          </label>
+          <input
+            type="password"
+            className="form-control"
+            id="inputPassword3"
+            placeholder="Password"
+            value={user.password}
+            onChange={this.passwordChange}
+          />
+          <Link to="/login" className="loginLink">Need to Login?</Link>
+          <button
+            type="submit"
+            className="btn btn-default btn-lg changeButton"
+            onClick={this.registerClickEvent}
+          >
+            Register
+          </button>
+        </form>
       </div>
     );
   }

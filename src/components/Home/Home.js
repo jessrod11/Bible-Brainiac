@@ -67,21 +67,25 @@ class Home extends React.Component {
   render () {
     const { authed } = this.props;
     return (
-      <div className="Home bg">
-        {
-          authed ? (
-            <button
-              className="btn btn-info btn-lg play-button"
-              onClick={this.startGameEvent}
-            >
-              Let's play!
-            </button>
-          ) : (
-            <button className="btn btn-info btn-lg play-button">
-                Welcome!
-            </button>
-          )
-        }
+      <div className="Home">
+
+        <header id="display">
+          <h1>Scripture Memory App</h1>
+          {
+            authed ? (
+              <button
+                className="btn btn-info btn-lg play-button"
+                onClick={this.startGameEvent}
+              >
+                Let's play!
+              </button>
+            ) : (
+              <button className="btn btn-info btn-lg play-button">
+                    Welcome!
+              </button>
+            )
+          }
+        </header>
       </div>
     );
   }
