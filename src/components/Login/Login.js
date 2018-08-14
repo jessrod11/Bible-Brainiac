@@ -51,7 +51,6 @@ class Login extends React.Component {
           </label>
           <input
             type="email"
-            className="form-control"
             id="inputEmail"
             placeholder="Enter Email..."
             value={user.email}
@@ -62,13 +61,12 @@ class Login extends React.Component {
           </label>
           <input
             type="password"
-            className="form-control"
             id="inputPassword"
             placeholder="Enter Password..."
             value={user.password}
             onChange={this.passwordChange}
           />
-          <Link to="/register" className="registerLink">Need to register?</Link>
+          <Link to="/register" className="registerLink text-center">Need to register?</Link>
           <button
             type="submit"
             className="btn btn-default btn-lg changeButton"
