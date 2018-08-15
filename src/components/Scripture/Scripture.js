@@ -18,16 +18,18 @@ class Scripture extends React.Component {
   render () {
     const {details, cardId, book} = this.props;
     return (
-      <ul className="Scripture col-md-4 selected-Card card-styles" >
-        <li>
-          <button
-            id={cardId}
-            className="verse-styles"
-            onClick={this.selectedCardEvent}
-            book={book}
-          >
-            {details}</button></li>
-      </ul>
+      <div className="Scripture col-md-4">
+        <ul className="scriptureCard">
+          <li>
+            <button
+              id={cardId}
+              className="verse-styles"
+              onClick={this.selectedCardEvent}
+              book={book}
+            >
+              {details}</button></li>
+        </ul>
+      </div>
     );
   }
 }
