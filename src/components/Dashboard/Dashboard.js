@@ -73,14 +73,14 @@ class Dashboard extends React.Component {
     });
 
     return (
-      <div className="Dashboard">
-        <div className="col-md-6">
-          <h1>Dashboard</h1>
-          <button className="btn btn-danger">Start New Game</button>
+      <div className="Dashboard container ">
+        <h1 className="text-center"> My Dashboard</h1>
+        <div className="col-md-6 game-container">
+          <h2>My Games</h2>
           {gameComponents}
         </div>
-        <div className="col-md-6">
-          <h1>My Favorite Scriptures</h1>
+        <div className="col-md-6 faves-container">
+          <h2>My Favorite Scriptures</h2>
           {favesComponents}
         </div>
       </div>

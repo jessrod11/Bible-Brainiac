@@ -18,7 +18,7 @@ class Scripture extends React.Component {
   render () {
     const {details, cardId, book} = this.props;
     return (
-      <div className="Scripture col-md-4">
+      <div className="Scripture container col-md-4">
         <ul className="scriptureCard">
           <li>
             <button

@@ -1,11 +1,23 @@
 @import './styles/colors';
 
-.Dashboard {
-    text-align: center;
+.Dashboard h1 {
+    font-size: 1.9em;
 }
-.game-button{
-    text-transform: initial;
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 5px;
+
+.game-container {
+    background-color: skyblue;
+    height: 90vh;
 }
+
+.faves-container {
+    background-color:#2c3e50;
+    height: 90vh;
+    color: white;
+}
+
+// .game-button{
+//     text-transform: initial;
+//     text-align: left;
+//     margin-top: 10px;
+//     margin-bottom: 5px;
+// }

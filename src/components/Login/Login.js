@@ -69,7 +69,7 @@ class Login extends React.Component {
           <Link to="/register" className="registerLink text-center">Need to register?</Link>
           <button
             type="submit"
-            className="btn btn-default btn-lg changeButton"
+            className="btn btn-lg changeButton"
             onClick={this.loginClickEvent}>
             Login
           </button>

@@ -75,7 +75,9 @@ class VerseSpa extends React.Component {
     return (
       <div className="VerseSpa">
         <h1>Scripture for the week</h1>
-        {featureVerseComponent}
+        <div className="container text-center well">
+          {featureVerseComponent}
+        </div>
       </div>
     );
   }
