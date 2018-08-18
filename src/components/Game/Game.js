@@ -1,4 +1,5 @@
 import React from 'react';
+import {Alert} from 'react-bootstrap';
 import Scripture from '../Scripture/Scripture';
 import gameRequests from '../../FirebaseRequests/games';
 import featureRequests from '../../FirebaseRequests/featureVerse';
@@ -27,8 +28,8 @@ class Game extends React.Component {
 
   ohNo = () => {
     return (
-      <div className="alert alert-danger">
-        <p>Uh-oh! Try Again!</p>
+      <div>
+        <Alert bsStyle="danger">"Oh No!"</Alert>
       </div>
     );
   }
@@ -74,14 +75,17 @@ class Game extends React.Component {
 
     return (
       <div className="Game">
-        <h1>Game</h1>
+        <div className="text-center">
+          <div className="col-md-12">
+            {gameComponents}
+          </div>
+        </div>
         <button
-          className="btn btn-lg btn-danger"
+          className="btn btn-lg btn-danger text-center scriptureBtn"
           onClick={this.correctBookEvent}
         >
           {scriptureBook}
         </button>
-        {gameComponents}
       </div>
     );
   };

@@ -3,3 +3,26 @@
 .Navbar {
   background: $pink;
 }
+
+.logout-button{
+  background: $blue;
+  width: 145px;
+  font-size: 22px;
+  border-radius: 28px;
+}
+
+.logout-button:hover{
+  background: $yellow;
+}
+
+.login-button {
+  margin-right: 25px;
+  background: $blue;
+  width: 145px;
+  font-size: 22px;
+  border-radius: 28px;
+}
+
+.login-button:hover {
+  background: $yellow;
+}

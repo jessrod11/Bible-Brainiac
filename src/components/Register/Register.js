@@ -70,7 +70,7 @@ class Register extends React.Component {
           <Link to="/login" className="loginLink">Need to Login?</Link>
           <button
             type="submit"
-            className="btn btn-default btn-lg changeButton"
+            className="btn btn-default btn-lg changeRegisterButton"
             onClick={this.registerClickEvent}
           >
             Register

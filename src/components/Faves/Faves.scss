@@ -1,11 +1,10 @@
 @import'./styles/colors';
 
-.Faves {
-  background: transparent;
+.Faves h3 {
+ color: $white;
 }
-
 .divider {
   height: 1px;
-  overflow: hidden;
+  // overflow: hidden;
   background-color: #e0e0e0;
 }

@@ -9,12 +9,12 @@ class  YouWon extends  React.Component {
         <h1>{details.verse}</h1>
         <h1>{details.verseBook}</h1>
         <button
-          className=" btn btn-lg glyphicon glyphicon-heart"
+          className=" btn btn-lg glyphicon glyphicon-heart heart-button"
           onClick={postFavorite}
         >
         </button>
         <button
-          className="btn btn-lg btn-info"
+          className="btn btn-lg btn-default complete-button"
           onClick={completeGame}
         >
           Complete</button>

@@ -1,5 +1,16 @@
 @import './styles/colors';
 
 .YouWon {
+  text-align: center;
+}
+
+.heart-button {
   background: $pink;
+  margin-right: 10px;
+}
+
+.complete-button {
+  background: $blue;
+  color: white;
+  border: none;
 }

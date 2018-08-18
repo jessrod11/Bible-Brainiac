@@ -74,8 +74,11 @@ class VerseSpa extends React.Component {
 
     return (
       <div className="VerseSpa">
-        <h1>Scripture for the week</h1>
-        {featureVerseComponent}
+        <h3>Scripture for the week</h3>
+        <img class="trophy" src="https://img.clipartxtras.com/ecbca120af1b2d73ef4016db46aa5954_image-pizza-eating-contest-trophypng-club-penguin-wiki-trophy-clipart-transparent_720-720.png" alt=""/>
+        <div className="container text-center well well-lg spaWell">
+          {featureVerseComponent}
+        </div>
       </div>
     );
   }

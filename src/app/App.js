@@ -80,41 +80,37 @@ class App extends React.Component {
               authed={this.state.authed}
               runAway={this.runAway}
             />
-            <div className="container">
-              <div className="row">
-                <Switch>
-                  <Route
-                    path="/home"
-                    render={props => <Home{...props} authed={this.state.authed}/>}
-                  />
-                  <PrivateRoute
-                    path="/dashboard"
-                    authed={this.state.authed}
-                    component={Dashboard}
-                  />
-                  <PublicRoute
-                    path="/register"
-                    authed={this.state.authed}
-                    component={Register}
-                  />
-                  <PublicRoute
-                    path="/login"
-                    authed={this.state.authed}
-                    component={Login}
-                  />
-                  <PrivateRoute
-                    path="/game/:id"
-                    authed={this.state.authed}
-                    component={Game}
-                  />
-                  <PrivateRoute
-                    path="/scripture/:gameId"
-                    authed={this.state.authed}
-                    component={Scripture}
-                  />
-                </Switch>
-              </div>
-            </div>
+            <Switch>
+              <Route
+                path="/home"
+                render={props => <Home{...props} authed={this.state.authed}/>}
+              />
+              <PrivateRoute
+                path="/dashboard"
+                authed={this.state.authed}
+                component={Dashboard}
+              />
+              <PublicRoute
+                path="/register"
+                authed={this.state.authed}
+                component={Register}
+              />
+              <PublicRoute
+                path="/login"
+                authed={this.state.authed}
+                component={Login}
+              />
+              <PrivateRoute
+                path="/game/:id"
+                authed={this.state.authed}
+                component={Game}
+              />
+              <PrivateRoute
+                path="/scripture/:gameId"
+                authed={this.state.authed}
+                component={Scripture}
+              />
+            </Switch>
           </div>
         </BrowserRouter>
       </div>
