@@ -5,8 +5,19 @@
 }
 
 .scriptureBtn {
-  margin-top: -1200px;
- margin-bottom: 20px;
+// width: 100%;
+font-size: 35px;
+padding: 35px 90px;
+background: $red;
+color: $white;
+border: none;
+border-radius: 5px;
+}
+
+#mybutton {
+    position: fixed;
+    bottom: 15%;
+    left: 69%;
 }
 
 ul  {

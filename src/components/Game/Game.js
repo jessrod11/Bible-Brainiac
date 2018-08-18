@@ -76,16 +76,18 @@ class Game extends React.Component {
     return (
       <div className="Game">
         <div className="text-center">
-          <div className="col-md-12">
+          <div className="">
             {gameComponents}
           </div>
         </div>
-        <button
-          className="btn btn-lg btn-danger text-center scriptureBtn"
-          onClick={this.correctBookEvent}
-        >
-          {scriptureBook}
-        </button>
+        <div id="mybutton">
+          <button
+            className="text-center scriptureBtn"
+            onClick={this.correctBookEvent}
+          >
+            {scriptureBook}
+          </button>
+        </div>
       </div>
     );
   };
