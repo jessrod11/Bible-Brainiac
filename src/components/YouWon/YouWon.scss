@@ -2,5 +2,15 @@
 
 .YouWon {
   text-align: center;
-  // background: $pink;
+}
+
+.heart-button {
+  background: $pink;
+  margin-right: 10px;
+}
+
+.complete-button {
+  background: $blue;
+  color: white;
+  border: none;
 }

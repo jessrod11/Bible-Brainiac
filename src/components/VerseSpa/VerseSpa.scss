@@ -1,7 +1,22 @@
 @import './styles/colors';
 
 .VerseSpa {
-  margin-top: 100px;
   text-align: center;
   background: transparent;
+}
+
+.VerseSpa h3 {
+  color: $white;
+  margin-top: 65px;
+  font-size: 2.9em;
+}
+
+.trophy {
+  width: 25%;
+}
+
+.spaWell {
+  background: #2c3e50;;
+  border: none;
+  color: $white;
 }

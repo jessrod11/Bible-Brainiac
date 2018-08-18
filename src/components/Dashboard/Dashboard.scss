@@ -1,23 +1,31 @@
 @import './styles/colors';
 
 .Dashboard h1 {
-    font-size: 1.9em;
+    font-size: 2.9em;
+    margin-bottom: 50px;
+    color: $white;
+}
+
+.dashboard-game {
+    font-size: 25px;
 }
 
 .game-container {
     background-color: skyblue;
-    height: 90vh;
+     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    height: 60vh;
 }
 
 .faves-container {
     background-color:#2c3e50;
-    height: 90vh;
-    color: white;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    height: 60vh;
 }
 
-// .game-button{
-//     text-transform: initial;
-//     text-align: left;
-//     margin-top: 10px;
-//     margin-bottom: 5px;
-// }
+.faves-container h2 {
+    color: white;
+}

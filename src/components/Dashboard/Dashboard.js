@@ -58,7 +58,7 @@ class Dashboard extends React.Component {
           className="col-xs-12 btn btn-default text-center game-button"
           onClick={singleGameEvent}
         >
-          <span className="col-xs-6"> Game Number: {game.id}</span>
+          <span className="col-xs-6 dashboard-game"> Game Number: {game.id}</span>
         </button>
       );
     });
@@ -76,11 +76,11 @@ class Dashboard extends React.Component {
       <div className="Dashboard container ">
         <h1 className="text-center"> My Dashboard</h1>
         <div className="col-md-6 game-container">
-          <h2>My Games</h2>
+          <h2 className="text-center">My Games</h2>
           {gameComponents}
         </div>
         <div className="col-md-6 faves-container">
-          <h2>My Favorite Scriptures</h2>
+          <h2 className="text-center">My Favorite Scriptures</h2>
           {favesComponents}
         </div>
       </div>

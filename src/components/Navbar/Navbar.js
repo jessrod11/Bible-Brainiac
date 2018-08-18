@@ -30,11 +30,11 @@ class Navbar extends React.Component {
                 <ul className="nav navbar-nav navbar-right">
                   <li><Link to="/scripture/:id">Scripture</Link></li>
                   <li><Link to="/dashboard">Dashboard</Link></li>
-                  <li className="navbar-form"><button onClick={logoutClickEvent}  className="btn btn-info">Logout</button></li>
+                  <li className="navbar-form"><button onClick={logoutClickEvent}  className="btn btn-info logout-button">Logout</button></li>
                 </ul>
               ) : (
                 <ul className="nav navbar-nav navbar-right">
-                  <li><Link to="/login">Login</Link></li>
+                  <li className="login-button text-center"><Link to="/login">Login</Link></li>
                 </ul>
               )
             }

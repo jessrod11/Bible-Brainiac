@@ -63,17 +63,19 @@
   text-align: center;
 }
 
-.changeButton {
-  margin-left: 140px;
+.changeRegisterButton {
+  margin-left: 100px;
   margin-top: 10px;
   color: $white;
-  height: 40px;
-  font-size: 16px;
+  font-size: 40px;
   border: none;
+  border-radius: 15px;
   background: $pink;
+  width: 180px;
+  padding: 4px 0;
 }
 
-.changeButton:hover{
+.changeRegisterButton:hover{
   background: $yellow;
   color: #262626;
 }
