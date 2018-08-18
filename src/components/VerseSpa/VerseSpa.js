@@ -49,7 +49,6 @@ class VerseSpa extends React.Component {
     const gameId = this.props.match.params.gameId;
     featureRequests.getSingleGame(gameId)
       .then((game) => {
-        console.error(game);
         game.completedAt = new Date();
         featureRequests.putRequest(gameId, game)
           .then(() => {
