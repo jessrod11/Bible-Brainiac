@@ -2,12 +2,13 @@
 
 .Game {
   text-align: center;
+  overflow: hidden;
 }
 
 .scriptureBtn {
 // width: 100%;
 font-size: 35px;
-padding: 35px 90px;
+padding: 25px 75px;
 background: $red;
 color: $white;
 border: none;
@@ -16,8 +17,8 @@ border-radius: 5px;
 
 #mybutton {
     position: fixed;
-    bottom: 15%;
-    left: 69%;
+    bottom: 17%;
+    left: 70%;
 }
 
 ul  {
