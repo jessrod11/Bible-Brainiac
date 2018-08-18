@@ -1,8 +1,9 @@
 import React from 'react';
-import {Alert} from 'react-bootstrap';
+import Alert from 'react-s-alert';
 import Scripture from '../Scripture/Scripture';
 import gameRequests from '../../FirebaseRequests/games';
 import featureRequests from '../../FirebaseRequests/featureVerse';
+import 'react-s-alert/dist/s-alert-css-effects/bouncyflip.css';
 
 import './Game.css';
 
@@ -26,12 +27,12 @@ class Game extends React.Component {
     this.correctCardCheck(card);
   };
 
-  ohNo = () => {
-    return (
-      <div>
-        <Alert bsStyle="danger">"Oh No!"</Alert>
-      </div>
-    );
+  ohNo = e => {
+    Alert.error('Uh-Oh! Try Again!', {
+      position: 'top',
+      effect: 'bouncyflip',
+      timeout: 1000,
+    });
   }
 
   correctCardCheck = (card) => {
@@ -57,14 +58,21 @@ class Game extends React.Component {
         const verseId = this.state.game.scriptures[cardId].id;
         const verseBook = this.state.game.scriptures[cardId].verseBook;
         return (
-          <Scripture
-            key={verseId}
-            cardId={cardId}
-            details={details}
-            book={verseBook}
-            scriptures={this.state.game}
-            selectedCardEvent={this.selectedCardEvent}
-          />
+          <div>
+            <span>
+              {this.props.children}
+            </span>
+            <Alert stack={{ limit: 3 }} />
+
+            <Scripture
+              key={verseId}
+              cardId={cardId}
+              details={details}
+              book={verseBook}
+              scriptures={this.state.game}
+              selectedCardEvent={this.selectedCardEvent}
+            />
+          </div>
         );
       });
     }
