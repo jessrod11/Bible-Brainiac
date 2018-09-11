@@ -6,13 +6,13 @@
 }
 
 .scriptureBtn {
-// width: 100%;
+  width: 100%;
 font-size: 35px;
 padding: 25px 75px;
 background: $red;
 color: $white;
-border: none;
-border-radius: 5px;
+border-radius: 25px;
+border: 8px solid $white;
 }
 
 #mybutton {
