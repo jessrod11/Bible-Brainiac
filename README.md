@@ -5,9 +5,9 @@
 ## Login/Register
 Using authentication, the parent of the child can register and login into the application.
 
-![Register](images/login.png)
+![Register](images/register.png)
 
-![Login](images/register.png)
+![Login](images/login.png)
 
 ## Let's Play!
 
