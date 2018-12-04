@@ -1,9 +1,9 @@
 # Bible Brainiac
 
-## A bible memory application created for kids using React.js.
+## A scripture memory application created for kids using React.js.
 
 ## Register/Login
-Using authentication, the parent of the child can register and login into the application.
+Using authentication, the parent of the child can register and log into the application.
 
 ![Register](images/register.png)
 
