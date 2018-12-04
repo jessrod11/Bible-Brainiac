@@ -70,7 +70,6 @@ class Home extends React.Component {
       <div className="Home">
 
         <header id="display">
-          <h1>Scripture Memory App</h1>
           {
             authed ? (
               <button
