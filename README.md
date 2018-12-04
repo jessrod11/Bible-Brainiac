@@ -2,7 +2,7 @@
 
 ## A bible memory application created for kids using React.js.
 
-## Login/Register
+## Register/Login
 Using authentication, the parent of the child can register and login into the application.
 
 ![Register](images/register.png)
