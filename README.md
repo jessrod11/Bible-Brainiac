@@ -17,7 +17,7 @@ On the home screen, the child now has the option to play the game!
 
 ## Board Game
 
-The child is presented with a scripture reference in the bottom right corner, and should select the correct verse that matches that scripture reference.
+The child is presented with a scripture reference in the bottom right corner and should select the correct verse that matches that scripture reference.
 
 ![Game](images/boardgame.png)
 
@@ -29,7 +29,7 @@ Once the correct scripture is chosen, it is then the child's scripture for the w
 
 ## Dashboard
 
-On the right of the navigation bar, the child can select the dashboard which shows the games played and the scritpures that have been saved. The child can also delete the scripture from their dashboard.
+On the right of the navigation bar, the child can select the dashboard which shows the games played and the scriptures that have been saved. The child can also delete the scripture from their dashboard.
 
 ![Dashboard](images/dashboard.png)
 
