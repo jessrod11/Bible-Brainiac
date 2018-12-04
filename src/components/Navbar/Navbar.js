@@ -23,7 +23,7 @@ class Navbar extends React.Component {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <Link className="navbar-brand brand-style" to="/home">Scripture App</Link>
+              <Link className="navbar-brand brand-style" to="/home">Bible Brainiac</Link>
             </div>
             {
               authed ? (
